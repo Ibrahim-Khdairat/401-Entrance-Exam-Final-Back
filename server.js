@@ -70,9 +70,9 @@ class Color {
 }
 
 server.get('/allcolors', async (req, res) => {
-    let dataFromAPI = await axios.get('https://ltuc-asac-api.herokuapp.com/allColorData');
+    let dataFromAPI = await axios.get('https://jordan-black-iris.herokuapp.com/places');
     let data = dataFromAPI.data.map(color => {
-        return new Color(color.title, color.imageUrl)
+        return new Color(color.name, color.img)
     })
     res.status(200).send(data)
 })
