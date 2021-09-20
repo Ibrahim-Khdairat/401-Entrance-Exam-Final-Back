@@ -70,7 +70,7 @@ class Color {
 }
 
 server.get('/allcolors', async (req, res) => {
-    let dataFromAPI = await axios.get('https://jordan-black-iris.herokuapp.com/places');
+    let dataFromAPI = await axios.get('<PUT the Api here>');
     let data = dataFromAPI.data.map(color => {
         return new Color(color.name, color.img)
     })
